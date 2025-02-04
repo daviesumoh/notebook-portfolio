@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #FAF7F0;
+    --paper-line: rgba(59, 130, 246, 0.15);
+    --margin-line: rgba(239, 68, 68, 0.45);
+    --ink: #181824;
+    --ink-soft: #2D2D3F;
+    --ink-faint: #717188;
+  }
+
+  body {
+    font-family: var(--font-script), 'Caveat', cursive;
+  }
+}
+
+/* Notebook Ruled Paper Lines - 32px rhythm matching Seb's diary */
+.lined-pattern {
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 31px,
+    var(--paper-line) 31px,
+    var(--paper-line) 32px
+  );
+  background-position: 0 0;
+}
+
+/* Hardcover Book / Diary Exterior (No Ruled Lines) */
+.diary-hardcover {
+  background-color: #1A1D24;
+  background-image:
+    radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 65%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 32px, transparent 64px),
+    linear-gradient(to right, transparent calc(100% - 24px), rgba(0, 0, 0, 0.35) 100%),
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 20px 20px;
+  box-shadow: 
+    inset 4px 0 10px rgba(255, 255, 255, 0.08),
+    inset -12px 0 24px rgba(0, 0, 0, 0.6),
+    0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Debossed Hardcover Hinge Crease */
+.hardcover-hinge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 3px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.5));
+  box-shadow: inset 1px 0 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* Hardcover Blind Deboss Framing */
+.hardcover-frame {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Typography Classes */
+.font-script {
+  font-family: var(--font-script), 'Kalam', cursive !important;
+  font-weight: 300 !important; /* Thinner, natural penmanship stroke */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings & bold elements: thinner ink weight (400 instead of heavy 700) */
+.font-script.font-bold,
+.font-script.font-semibold,
+.font-script strong,
+.font-script b,
+h1.font-script,
+h2.font-script,
+h3.font-script {
+  font-weight: 400 !important; /* Medium authentic handwriting, not heavy marker */
+}
+
+/* Notebook Rule Line Alignment Helper */
+.ruled-line-align {
+  line-height: 32px !important;
+  transform: translateY(6px);
+}
+
+.font-mono {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace !important;
+}
+
+.font-sans {
+  font-family: var(--font-sans), 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Semi-transparent Scotch Tape Overlay */
+.scotch-tape {
+  position: absolute;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* Red Margin Rule */
+.red-margin {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--margin-line);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Dog-ear Page Fold */
+.dog-ear {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, transparent 50%, #E2DDD3 50%);
+  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 4px 6px;
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #71717A;
+  user-select: none;
+}
+
+/* Spiral Ring Spine & Wire Loops */
+.ring-hole {
+  width: 13px;
+  height: 13px;
+  background: #2E2B26;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.85), 0 1px 1px rgba(255, 255, 255, 0.4);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ring-wire-left {
+  position: absolute;
+  left: -12px;
+  top: -4px;
+  width: 44px;
+  height: 22px;
+  border: 3.5px solid #8A857D;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: #555047;
+  filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.28));
+  pointer-events: none;
+}
+
+.ring-wire-center {
+  position: absolute;
+  left: -16px;
+  top: -3px;
+  width: 44px;
+  height: 19px;
+  border: 3.5px solid #8A857D;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: #555047;
+  filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+}
+
+/* Hide Journal Scrollbars while keeping wheel/touch scroll functional */
+.notebook-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.notebook-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Highlighter and Smooth Fade-in Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Fluorescent Highlighter Marker Style */
+.marker-highlight {
+  background: rgba(254, 240, 138, 0.85);
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.35);
+  border-radius: 4px;
+}
