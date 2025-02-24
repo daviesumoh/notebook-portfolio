@@ -18,3 +18,5 @@ export default function ThreeBackground() {
     </Canvas>
   )
 }
+
+// Optimized particle field animation
