@@ -63,3 +63,5 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
     </motion.div>
   )
 }
+
+// Added BiometricAI project card
