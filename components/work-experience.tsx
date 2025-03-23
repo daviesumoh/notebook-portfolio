@@ -348,3 +348,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
     </>
   )
 }
+
+// Added Trimble Inc. role
