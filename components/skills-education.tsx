@@ -95,3 +95,5 @@ export default function SkillsEducation() {
     </div>
   )
 }
+
+// Core engineering coursework
