@@ -218,3 +218,5 @@ h3.font-script {
 }
 
 /* Project cards grid layout */
+
+html { scroll-behavior: smooth; }
