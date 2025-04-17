@@ -354,3 +354,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Updated Trimble narrative
 
 // Added GitCloud Co-Founder
+
+// Partnered with Google Toronto
