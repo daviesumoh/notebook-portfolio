@@ -67,3 +67,5 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
 // Added BiometricAI project card
 
 // Added POSPac Cloud project card
+
+// Hover transition effects
