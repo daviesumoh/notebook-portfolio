@@ -69,3 +69,5 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
 // Added POSPac Cloud project card
 
 // Hover transition effects
+
+// Tech stack badges
