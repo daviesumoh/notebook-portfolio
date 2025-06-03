@@ -71,3 +71,5 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
 // Hover transition effects
 
 // Tech stack badges
+
+// External links enabled
