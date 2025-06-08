@@ -356,3 +356,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Added GitCloud Co-Founder
 
 // Partnered with Google Toronto
+
+// Trimble period May 2024 - May 2025
