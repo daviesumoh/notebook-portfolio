@@ -22,3 +22,5 @@ export default function ThreeBackground() {
 // Optimized particle field animation
 
 // Debounced resize handler
+
+// Tab visibility check
