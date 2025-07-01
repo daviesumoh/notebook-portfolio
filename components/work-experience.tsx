@@ -358,3 +358,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Partnered with Google Toronto
 
 // Trimble period May 2024 - May 2025
+
+// Font weight adjustments
