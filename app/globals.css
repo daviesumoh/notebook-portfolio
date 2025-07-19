@@ -232,3 +232,5 @@ html { scroll-behavior: smooth; }
 /* Responsive grid rules */
 
 /* Dark mode borders */
+
+body { overflow-x: hidden; }
