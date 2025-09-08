@@ -366,3 +366,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Clean imports
 
 // Added Soda Data role
+
+// Soda Data description
