@@ -368,3 +368,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Added Soda Data role
 
 // Soda Data description
+
+// Linked Soda demo video
