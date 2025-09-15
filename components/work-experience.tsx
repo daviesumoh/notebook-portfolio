@@ -370,3 +370,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Soda Data description
 
 // Linked Soda demo video
+
+// Added MockQ Co-Founder
