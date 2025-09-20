@@ -485,3 +485,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
     </AnimatePresence>
   )
 }
+
+// Image modal preview support
