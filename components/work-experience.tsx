@@ -374,3 +374,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Added MockQ Co-Founder
 
 // MockQ narrative
+
+// Modal trigger wired
