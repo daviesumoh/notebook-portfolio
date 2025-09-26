@@ -487,3 +487,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 }
 
 // Image modal preview support
+
+// Video player controls
