@@ -491,3 +491,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 // Video player controls
 
 // Safari backdrop filter
+
+// Escape key listener
