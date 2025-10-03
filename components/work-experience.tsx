@@ -376,3 +376,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // MockQ narrative
 
 // Modal trigger wired
+
+// Timeline spacing adjustment
