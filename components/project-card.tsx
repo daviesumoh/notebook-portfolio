@@ -73,3 +73,5 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
 // Tech stack badges
 
 // External links enabled
+
+// Updated project URLs
