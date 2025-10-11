@@ -75,3 +75,5 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
 // External links enabled
 
 // Updated project URLs
+
+// Image optimization flags
