@@ -493,3 +493,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 // Safari backdrop filter
 
 // Escape key listener
+
+// Modal typography
