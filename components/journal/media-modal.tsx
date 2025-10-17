@@ -495,3 +495,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 // Escape key listener
 
 // Modal typography
+
+// Pause video on close
