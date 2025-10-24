@@ -378,3 +378,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Modal trigger wired
 
 // Timeline spacing adjustment
+
+// Subcomponent refactor
