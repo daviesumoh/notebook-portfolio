@@ -497,3 +497,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 // Modal typography
 
 // Pause video on close
+
+// Scroll lock fix
