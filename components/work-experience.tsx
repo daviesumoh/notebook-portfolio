@@ -380,3 +380,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Timeline spacing adjustment
 
 // Subcomponent refactor
+
+// 600-engineer waitlist
