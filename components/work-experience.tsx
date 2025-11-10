@@ -386,3 +386,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Clean logs
 
 // 1B+ rows anomaly detection
+
+// Securing $42k Dev Funding
