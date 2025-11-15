@@ -499,3 +499,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 // Pause video on close
 
 // Scroll lock fix
+
+// Clean state hooks
