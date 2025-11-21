@@ -388,3 +388,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // 1B+ rows anomaly detection
 
 // Securing $42k Dev Funding
+
+// Touch targets 44px min
