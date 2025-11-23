@@ -38,3 +38,5 @@ export default function ThemeToggle() {
 // Fixed header position
 
 // Accessibility aria labels
+
+// Mounted check
