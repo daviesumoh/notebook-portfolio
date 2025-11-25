@@ -101,3 +101,5 @@ export default function SkillsEducation() {
 // Added Airflow & PySpark
 
 // Added Databricks & Cloud
+
+// Certifications list
