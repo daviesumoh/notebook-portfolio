@@ -501,3 +501,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 // Scroll lock fix
 
 // Clean state hooks
+
+// Smooth enter animation
