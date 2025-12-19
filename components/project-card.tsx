@@ -77,3 +77,5 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
 // Updated project URLs
 
 // Image optimization flags
+
+// Using Badge primitive
