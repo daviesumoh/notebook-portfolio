@@ -49,3 +49,5 @@ export default function RootLayout({
 }
 
 // SEO metadata configuration
+
+// Keywords update
