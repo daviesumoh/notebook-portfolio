@@ -503,3 +503,5 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
 // Clean state hooks
 
 // Smooth enter animation
+
+// Video error fallback
