@@ -390,3 +390,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Securing $42k Dev Funding
 
 // Touch targets 44px min
+
+// Gradient line
