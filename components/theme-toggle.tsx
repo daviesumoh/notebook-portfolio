@@ -40,3 +40,5 @@ export default function ThemeToggle() {
 // Accessibility aria labels
 
 // Mounted check
+
+// Focus ring on toggle
