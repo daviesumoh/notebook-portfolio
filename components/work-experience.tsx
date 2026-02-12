@@ -392,3 +392,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Touch targets 44px min
 
 // Gradient line
+
+// Text wrapping fix
