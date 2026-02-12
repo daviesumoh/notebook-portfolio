@@ -103,3 +103,5 @@ export default function SkillsEducation() {
 // Added Databricks & Cloud
 
 // Certifications list
+
+// Skills copy tweak
