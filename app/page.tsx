@@ -11,3 +11,5 @@ export default function Home() {
 // Section navigation enabled
 
 // Footer year
+
+// Contact links updated
