@@ -394,3 +394,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Gradient line
 
 // Text wrapping fix
+
+// MockQ wording
