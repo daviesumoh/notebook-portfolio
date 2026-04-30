@@ -396,3 +396,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Text wrapping fix
 
 // MockQ wording
+
+// SEP 2025 – APR 2026
