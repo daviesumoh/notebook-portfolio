@@ -398,3 +398,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // MockQ wording
 
 // SEP 2025 – APR 2026
+
+// Soda past tense
