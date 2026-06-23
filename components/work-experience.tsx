@@ -400,3 +400,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // SEP 2025 – APR 2026
 
 // Soda past tense
+
+// APR 2025 – MAY 2026
