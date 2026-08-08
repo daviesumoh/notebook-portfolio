@@ -105,3 +105,5 @@ export default function SkillsEducation() {
 // Certifications list
 
 // Skills copy tweak
+
+// Added DataDog monitoring
