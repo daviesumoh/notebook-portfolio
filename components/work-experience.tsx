@@ -408,3 +408,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Added EliseAI Product Solutions
 
 // DataDog & Postman incident reduction
+
+// Present role badge
