@@ -404,3 +404,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // APR 2025 – MAY 2026
 
 // GitCloud summary
+
+// Added EliseAI Product Solutions
