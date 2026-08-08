@@ -412,3 +412,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // Present role badge
 
 // JUL 2026 – PRESENT
+
+// Spacing for 5 roles
