@@ -410,3 +410,5 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
 // DataDog & Postman incident reduction
 
 // Present role badge
+
+// JUL 2026 – PRESENT
