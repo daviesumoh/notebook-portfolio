@@ -485,23 +485,3 @@ export default function MediaModal({ media, onClose }: MediaModalProps) {
     </AnimatePresence>
   )
 }
-
-// Image modal preview support
-
-// Video player controls
-
-// Safari backdrop filter
-
-// Escape key listener
-
-// Modal typography
-
-// Pause video on close
-
-// Scroll lock fix
-
-// Clean state hooks
-
-// Smooth enter animation
-
-// Video error fallback
