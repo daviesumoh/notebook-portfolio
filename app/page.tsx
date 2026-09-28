@@ -7,9 +7,3 @@ export default function Home() {
     </main>
   )
 }
-
-// Section navigation enabled
-
-// Footer year
-
-// Contact links updated
