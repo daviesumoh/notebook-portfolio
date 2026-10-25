@@ -802,4 +802,3 @@ export default function CoverPage({
     </div>
   )
 }
-
