@@ -34,11 +34,3 @@ export default function ThemeToggle() {
     </Button>
   )
 }
-
-// Fixed header position
-
-// Accessibility aria labels
-
-// Mounted check
-
-// Focus ring on toggle

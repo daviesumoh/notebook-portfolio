@@ -18,9 +18,3 @@ export default function ThreeBackground() {
     </Canvas>
   )
 }
-
-// Optimized particle field animation
-
-// Debounced resize handler
-
-// Tab visibility check

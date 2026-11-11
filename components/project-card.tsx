@@ -63,19 +63,3 @@ export default function ProjectCard({ title, techStack, description, videoId }: 
     </motion.div>
   )
 }
-
-// Added BiometricAI project card
-
-// Added POSPac Cloud project card
-
-// Hover transition effects
-
-// Tech stack badges
-
-// External links enabled
-
-// Updated project URLs
-
-// Image optimization flags
-
-// Using Badge primitive
