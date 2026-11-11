@@ -95,15 +95,3 @@ export default function SkillsEducation() {
     </div>
   )
 }
-
-// Core engineering coursework
-
-// Added Airflow & PySpark
-
-// Added Databricks & Cloud
-
-// Certifications list
-
-// Skills copy tweak
-
-// Added DataDog monitoring
