@@ -706,6 +706,10 @@ export const PROJECTS: ProjectEntry[] = [
     id: "phone-agent",
     highlightKey: "phone",
     title: "Computer Use Phone Agent",
+    description:
+      "Real-time voice agent that executes browser actions over phone calls, driving headed Chromium via Database-Oriented Operating Systems.",
+    techStack: "Python · LiveKit · Next.js · Playwright · DBOS",
+    githubUrl: "https://github.com/daviesumoh/Computer-Use-Voice-Agent",
   },
 ]
 
