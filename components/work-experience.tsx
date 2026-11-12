@@ -280,7 +280,7 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
                 {/* Responsibilities - Key Contributions First */}
                 <div className="mb-8">
                   <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4 font-mono">
-                    // Key Contributions
+                    {"// Key Contributions"}
                   </h3>
                   <ul className="space-y-3">
                     {selectedExperience.responsibilities.map((responsibility, i) => (
@@ -299,7 +299,7 @@ export default function WorkExperience({ imagesLoaded = true, onModalChange }: {
                 {selectedExperience.media && selectedExperience.media.length > 0 && (
                   <div>
                     <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4 font-mono">
-                      // Project Showcase
+                      {"// Project Showcase"}
                     </h3>
                     <div className="grid grid-cols-1 gap-4">
                       {selectedExperience.media.map((item, mediaIndex) => (

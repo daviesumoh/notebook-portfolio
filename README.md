@@ -73,3 +73,7 @@ npm run build
 npm run start
 ```
 
+
+## License
+
+MIT. See [LICENSE](LICENSE).
