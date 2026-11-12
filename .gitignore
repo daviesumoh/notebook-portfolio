@@ -19,3 +19,4 @@ build/
 .vercel
 portfolio.code-workspace
 *.local
+.playwright-cli/

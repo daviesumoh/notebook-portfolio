@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal engineering portfolio and interactive diary built with Next.js, React, Tailwind CSS, and TypeScript. Features a ruled notebook shell layout, keyboard and dogear page-flip navigation, handwriting typography, and an embedded portfolio assistant (DaveAI) backed by OpenAI.
+Personal engineering portfolio and interactive diary built with Next.js, React, Tailwind CSS, and TypeScript. It has a notebook-style layout with keyboard and corner page-flip navigation, and a chat assistant (DaveAI) backed by the OpenAI API.
 
 ## Tech Stack
 
@@ -54,6 +54,17 @@ lib/
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Configuration
+
+Environment variables are read from `.env.local` (git-ignored). Only `.env.example` is committed.
+
+| Variable | Required | Description |
+| --- | --- | --- |
+| `OPENAI_API_KEY` | For live chat | Without it the assistant falls back to the static profile in `lib/davies-profile.ts`. |
+| `DAVEAI_PERSONA_JSON` | No | JSON string overriding personal fields (favorite food, motto, etc.) so they stay out of the repo. |
+
+To make this your own, replace the content in `lib/portfolio-config.ts` and `lib/davies-profile.ts`, and the images in `public/`.
 
 ## Build
 

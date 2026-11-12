@@ -30,9 +30,16 @@ export default function NotebookShell() {
   const [shakeDaveAiTrigger, setShakeDaveAiTrigger] = useState<number>(0)
   const [focusBotTrigger, setFocusBotTrigger] = useState<number>(0)
   const [isDesktop, setIsDesktop] = useState(false)
+  // Browser zoom-in shrinks the CSS viewport; shrink the desktop layout to match so nothing clips.
+  const [fitScale, setFitScale] = useState(1)
 
   useEffect(() => {
-    const check = () => setIsDesktop(window.innerWidth >= 1024)
+    const check = () => {
+      const w = window.innerWidth
+      const h = window.innerHeight
+      setIsDesktop(w >= 1024)
+      setFitScale(w >= 1024 ? Math.max(0.55, Math.min(1, w / 1200, h / 780)) : 1)
+    }
     check()
     window.addEventListener("resize", check)
     return () => window.removeEventListener("resize", check)
@@ -304,7 +311,9 @@ export default function NotebookShell() {
   }
 
   return (
-    <div className="w-full h-full h-[100dvh] bg-[#EBE5D8] p-1.5 min-[480px]:py-2.5 min-[480px]:pl-2.5 min-[480px]:pr-[90px] sm:py-3 sm:pl-4 sm:pr-[100px] md:py-4 md:pl-6 md:pr-[106px] lg:py-5 lg:pl-12 lg:pr-[114px] xl:py-6 xl:pl-14 xl:pr-[118px] items-center justify-center font-script overflow-hidden selection:bg-[#FDE68A] selection:text-[#78350F] flex relative select-none">
+    <div
+      style={fitScale < 1 ? ({ zoom: fitScale, width: `${100 / fitScale}vw`, height: `${100 / fitScale}dvh` } as React.CSSProperties) : undefined}
+      className="w-full h-full h-[100dvh] bg-[#EBE5D8] p-1.5 min-[480px]:py-2.5 min-[480px]:pl-2.5 min-[480px]:pr-[90px] sm:py-3 sm:pl-4 sm:pr-[100px] md:py-4 md:pl-6 md:pr-[106px] lg:py-5 lg:pl-12 lg:pr-[114px] xl:py-6 xl:pl-14 xl:pr-[118px] items-center justify-center font-script overflow-hidden selection:bg-[#FDE68A] selection:text-[#78350F] flex relative select-none">
       
       {/* ============================================================== */}
       {/* DESK-FRAMED NOTEBOOK LAYOUT (480px+ covers desktop, zoom-out & deep zoom-in) */}
