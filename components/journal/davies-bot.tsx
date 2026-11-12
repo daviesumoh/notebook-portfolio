@@ -199,6 +199,12 @@ export default function DaviesBot({
         body: JSON.stringify({ message: query, history }),
       })
 
+      if (res.status === 429) {
+        const wait = Number(res.headers.get("Retry-After")) || 30
+        addBotReply(`Easy there, too many questions at once. Try again in about ${wait}s.`, "local", null, null, [])
+        return
+      }
+
       if (!res.ok) {
         throw new Error(`HTTP error ${res.status}`)
       }

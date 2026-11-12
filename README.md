@@ -64,6 +64,8 @@ Environment variables are read from `.env.local` (git-ignored). Only `.env.examp
 | `OPENAI_API_KEY` | For live chat | Without it the assistant falls back to the static profile in `lib/davies-profile.ts`. |
 | `DAVEAI_PERSONA_JSON` | No | JSON string overriding personal fields (favorite food, motto, etc.) so they stay out of the repo. |
 
+`/api/chat` allows 12 requests per minute per IP, caps messages at 500 characters and keeps the last 6 history turns. The limiter is in-memory (per server instance), so also set a spend limit on your OpenAI project and consider a firewall rule if you expose it publicly.
+
 To make this your own, replace the content in `lib/portfolio-config.ts` and `lib/davies-profile.ts`, and the images in `public/`.
 
 ## Build

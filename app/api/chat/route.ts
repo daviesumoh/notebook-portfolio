@@ -4,19 +4,59 @@ import {
   getLocalPortfolioResponse,
 } from "@/lib/davies-profile"
 import { buildResponseJsonSchema, sanitizeActions } from "@/lib/portfolio-actions"
+import { getClientIp, rateLimit } from "@/lib/rate-limit"
+
+const RATE_LIMIT_REQUESTS = 12
+const RATE_LIMIT_WINDOW_MS = 60_000
+const MAX_MESSAGE_CHARS = 500
+const MAX_HISTORY_ITEMS = 6
+const MAX_HISTORY_CHARS = 1000
+
+type HistoryItem = { role: "user" | "assistant"; content: string }
+
+// History comes from the client, so keep only well-formed user/assistant turns,
+// cap how many we forward, and truncate each one.
+function sanitizeHistory(history: unknown): HistoryItem[] {
+  if (!Array.isArray(history)) return []
+  return history
+    .filter(
+      (h): h is HistoryItem =>
+        !!h &&
+        (h.role === "user" || h.role === "assistant") &&
+        typeof h.content === "string" &&
+        h.content.trim().length > 0,
+    )
+    .slice(-MAX_HISTORY_ITEMS)
+    .map((h) => ({ role: h.role, content: h.content.slice(0, MAX_HISTORY_CHARS) }))
+}
 
 interface ChatRequestBody {
   message: string
-  history?: { role: "user" | "assistant"; content: string }[]
+  history?: unknown
 }
 
 export async function POST(req: NextRequest) {
+  const limit = rateLimit(getClientIp(req.headers), RATE_LIMIT_REQUESTS, RATE_LIMIT_WINDOW_MS)
+  if (!limit.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests. Please slow down." },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfterSeconds) } },
+    )
+  }
+
   try {
     const body = (await req.json()) as ChatRequestBody
-    const userMessage = body.message?.trim()
+    const userMessage = typeof body.message === "string" ? body.message.trim() : ""
 
     if (!userMessage) {
       return NextResponse.json({ error: "Message is required" }, { status: 400 })
+    }
+
+    if (userMessage.length > MAX_MESSAGE_CHARS) {
+      return NextResponse.json(
+        { error: `Message is too long (max ${MAX_MESSAGE_CHARS} characters)` },
+        { status: 400 },
+      )
     }
 
     // Check for OpenAI API key; otherwise fall back to local portfolio engine (which also guards offensive inputs)
@@ -31,10 +71,7 @@ export async function POST(req: NextRequest) {
 
     const messages = [
       { role: "system", content: dynamicSystemPrompt },
-      ...(body.history || []).map((h) => ({
-        role: h.role,
-        content: h.content,
-      })),
+      ...sanitizeHistory(body.history),
       { role: "user", content: userMessage },
     ]
 
